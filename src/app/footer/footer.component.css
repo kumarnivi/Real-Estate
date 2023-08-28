@@ -1,0 +1,37 @@
+/* Default styles */
+.footer {
+    /* Your existing styles for the footer container */
+  }
+  
+  /* Adjustments for smaller screens */
+  @media screen and (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer__row {
+      margin: 20px 0;
+    }
+  
+    .footer__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Further adjustments for even smaller screens, if needed */
+  @media screen and (max-width: 480px) {
+    .footer__text-container {
+      order: 2;
+    }
+  
+    .footer-divider {
+      display: none;
+    }
+  
+    .footer__columns {
+      margin-bottom: 20px;
+    }
+  }
+  
