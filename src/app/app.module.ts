@@ -14,6 +14,7 @@ import { Section07Component } from './section07/section07.component';
 import { Section08Component } from './section08/section08.component';
 import { FooterComponent } from './footer/footer.component';
 import { Section09Component } from './section09/section09.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,11 +29,13 @@ import { Section09Component } from './section09/section09.component';
     Section07Component,
     Section08Component,
     FooterComponent,
-    Section09Component
+    Section09Component,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

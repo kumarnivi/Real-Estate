@@ -1,7 +1,4 @@
-.container {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+
   
   a {
     text-decoration: none;
@@ -43,7 +40,7 @@
   
   /* Custom styles for the flat navigation bar */
   .navbar {
-    box-shadow: 0px 40px 40px -34px rgba(0, 0, 0, 0.08);
+    box-shadow: 10px 40px 40px -34px rgba(0, 0, 0, 0.08);
   }
   .navbar-brand {
     color: #343a40; /* Brand text color */
@@ -69,7 +66,7 @@
   }
   .dropdown-item {
     margin-top: 10%;
-  
+   
     color: rgb(7, 19, 59);
     border-radius: 10px;
     font-size: 15.85px; /* Dropdown item color */
@@ -81,19 +78,18 @@
   
   .navbar {
     border-radius: 10px;
-    position: fixed;
-    top: 20px;
-    left: 65px;
-    right: 65px;
-    z-index: 1000;
+   position: relative;
+  
+   
+    z-index: 1;
     background-color: #f8f9fa;
-    padding: 10px;
+
     padding-top: 18px;
     padding-bottom: 18px;
   }
   
   .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
-    display: block;
+    display: inherit;
   }
   
   .dropdown-menu {
