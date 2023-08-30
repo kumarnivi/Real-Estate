@@ -15,6 +15,8 @@ import { Section08Component } from './section08/section08.component';
 import { FooterComponent } from './footer/footer.component';
 import { Section09Component } from './section09/section09.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgbAccordionModule} from '@ng-bootstrap/ng-bootstrap'; 
 
 @NgModule({
   declarations: [
@@ -35,7 +37,10 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule,
+    NgbAccordionModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
