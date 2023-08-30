@@ -1,12 +1,7 @@
 <section class="section section--start">
   <div
     class="container--lg anim-scroll-up"
-    style="
-      opacity: 1;
-      transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-        rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-      transform-style: preserve-3d;
-    "
+
   >
     <div class="start__inner">
       <h2 class="heading-medium mod--start">How to get started?</h2>
@@ -36,12 +31,19 @@
                     'active-button': i === activePanelIndex
                   }"
                 >
-                  <h2>  <span class="panel-number">{{ i + 1 }}</span> {{ panel }}</h2>
+                <span class="panel-number"
+                class="panel-number"
+                [ngClass]="{
+                  'active-number': i === activePanelIndex
+                }"
+    
+                >{{ i + 1 }}</span>
+                  <h3>  {{ panel }}</h3>
                 </button>
               </h2>
               <div ngbAccordionCollapse>
                 <div ngbAccordionBody class="acco-body">
-                  <p>{{ content[panels.indexOf(panel)] }}</p>
+                  {{ content[panels.indexOf(panel)] }}
 
                   <!-- Display image only on mobile devices -->
                   <div>

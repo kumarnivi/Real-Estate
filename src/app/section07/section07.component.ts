@@ -14,10 +14,10 @@ export class Section07Component {
   panels: string[] = ['Provide your information', 'Select your location', 'Check Out', 'Access your dashboard'];
   content: string[] = ['Give us some details on yourself and your firm.', 'Provide a zip code and we will provide you with the highest propensity prospects in a 50 mile radius.', 'On the check out page you can select the products and quantity of leads you would like per month.', 'You have immediate access to your dasboard and your leads. From here you can easily track, manage, and export your exclusive leads.'];
   images: string[] = [
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJOi2pyfg14hb1e3waXJ5mceQkH4froE5TgnVQDkZt&s',
-     'https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.jpg?s=612x612&w=0&k=20&c=6mItwwFFGqKNKEAzv0mv6TaxhLN3zSE43bWmFN--J5w=',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJOi2pyfg14hb1e3waXJ5mceQkH4froE5TgnVQDkZt&s',
-    'https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg'
+    'https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c786db68d1e_first-p-800.webp',
+     'https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c2bf0b68cf9_second-p-800.webp',
+    'https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843ca0a6b68d4c_RE-p-800.webp',
+    'https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c48f7b68d57_fourth%2520RE-p-800.webp'
   ]; // Replace with actual image URLs
 
   activePanelIndex: number = -1; // Initialize with -1 to indicate no active panel initially
