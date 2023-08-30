@@ -1,45 +1,101 @@
-<div class="container">
-  <h2>How to get started?</h2>
-  <div class="row">
-    <div class="col-md-6">
-      <div ngbAccordion [closeOthers]="true">
+<section class="section section--start">
+  <div
+    class="container--lg anim-scroll-up"
+    style="
+      opacity: 1;
+      transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+        rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+    "
+  >
+    <div class="start__inner">
+      <h2 class="heading-medium mod--start">How to get started?</h2>
+      <div class="start__grid">
         <div
-          ngbAccordionItem
-          *ngFor="let panel of panels; let i = index"
-          [collapsed]="panel !== currentPanel"
-          (click)="setCurrentPanel(panel)"
+          id="w-node-ad35ca95-61ec-551f-fa50-0f6a522cc760-522cc75a"
+          class="accordion-list"
         >
-          <h2 ngbAccordionHeader>
-            <button ngbAccordionButton>{{ panel }}</button>
-          </h2>
-          <div ngbAccordionCollapse>
-            <div ngbAccordionBody>
-              {{ content[panels.indexOf(panel)] }}
-              <!-- Display image only on mobile devices -->
-              <div>
-                <img
-                src="{{ images[i] }}"
-                alt=""
-                class="img-fluid d-md-none" 
-                height="150"
-                width="150"
-              />
+          <div ngbAccordion [closeOthers]="true">
+            <div
+              ngbAccordionItem
+              *ngFor="let panel of panels; let i = index"
+              [collapsed]="panel !== currentPanel"
+              (click)="setCurrentPanel(panel)"
+              [ngClass]="{
+                'acco-item': true,
+                'active-panel': i === activePanelIndex
+              }"
+              class="acco-item"
+            >
+              <h2 ngbAccordionHeader>
+                <button
+                  ngbAccordionButton
+                  class="acco-btn"
+                  [ngClass]="{
+                    'acco-btn': true,
+                    'active-button': i === activePanelIndex
+                  }"
+                >
+                  <h2>  <span class="panel-number">{{ i + 1 }}</span> {{ panel }}</h2>
+                </button>
+              </h2>
+              <div ngbAccordionCollapse>
+                <div ngbAccordionBody class="acco-body">
+                  <p>{{ content[panels.indexOf(panel)] }}</p>
+
+                  <!-- Display image only on mobile devices -->
+                  <div>
+                    <img
+                      src="{{ images[i] }}"
+                      alt=""
+                      class="img-fluid d-md-none"
+                      height="550"
+                      width="550"
+                    />
+                  </div>
+                </div>
               </div>
-             
             </div>
           </div>
         </div>
+        <div
+          id="w-node-ad35ca95-61ec-551f-fa50-0f6a522cc799-522cc75a"
+          class="start__img-container"
+        >
+          <!-- Display image only on medium and larger screens -->
+          <img
+            src="{{ images[panels.indexOf(currentPanel)] }}"
+            alt=""
+            class="img-fluid d-none d-md-block"
+            height="550"
+            width="550"
+            style="margin-left: 30px; border-radius: 15px"
+          />
+        </div>
+        <div
+          id="w-node-ad35ca95-61ec-551f-fa50-0f6a522cc79e-522cc75a"
+          class="start__content-container"
+        >
+          <a
+            data-btn=""
+            href="https://re.catalyzeai.com/sign-up"
+            target="_blank"
+            class="button button--fill w-inline-block"
+            ><div class="button-text">Sign Up</div>
+            <div class="btn-circles mod--btn">
+              <div class="btn-circle"></div>
+              <div class="btn-circle mod--2"></div></div
+          ></a>
+          <div class="start__text">Register in under 5 minutes.</div>
+        </div>
+        <img
+          src="https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c83b0b68cf6_bg.svg"
+          loading="lazy"
+          id="w-node-ad35ca95-61ec-551f-fa50-0f6a522cc7a7-522cc75a"
+          alt=""
+          class="start__dec-img"
+        />
       </div>
     </div>
-    <div class="col-md-6">
-      <!-- Display image only on medium and larger screens -->
-      <img
-        src="{{ images[panels.indexOf(currentPanel)] }}"
-        alt=""
-        class="img-fluid d-none d-md-block" 
-        height="150"
-        width="150"
-      />
-    </div>
   </div>
-</div>
+</section>

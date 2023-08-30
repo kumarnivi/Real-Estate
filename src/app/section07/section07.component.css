@@ -1,0 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif !important;
+}
+/*  
+.container{
+    background-color: #07153D;
+    border: none;
+    border-radius: 10px;
+    padding:40px;
+  
+
+
+} */
+
+h2 {
+    color: #ffffff;
+}
+
+.acco-header {
+    border: none !important; 
+    border-radius: 5px !important; 
+    padding: 0;
+   
+}
+
+.acco-btn {
+    background-color: #07133B !important ;
+    color: #ffffff;
+    border: none !important;
+    border-radius: 5px !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%; 
+    text-align: left; 
+    margin-top: 5px;
+}
+
+.acco-body{
+    /* background-color: #d5dae6 !important;  */
+    color: #fff;
+    border: none !important;
+   border-radius: 5px;
+}
+
+.acco-item{
+    background-color: #07153D !important ;
+    border-radius: 10px;
+    border: none !important;
+}
+
+.acco-item.active-panel {
+    background-color:rgb(20,31,69) !important;
+    border-radius: 10px;
+    border: none !important;
+    border-radius: 10px;
+  }
+
+  .acco-btn.active-button {
+    background-color: rgb(20,31,69) !important;
+    border: solid rgb(20,31,69)  !important;
+    border-radius: 10px !important;
+    font-size: 1.5rem;
+  }
+   
+  .acco-btn.active-button::after {
+    color: #ffffff !important; /* Replace with the color you want */
+  }
+
+  
