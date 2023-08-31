@@ -16,7 +16,8 @@ import { FooterComponent } from './footer/footer.component';
 import { Section09Component } from './section09/section09.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {NgbAccordionModule} from '@ng-bootstrap/ng-bootstrap'; 
+import {NgbAccordionModule} from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 @NgModule({
   declarations: [
@@ -39,7 +40,9 @@ import {NgbAccordionModule} from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     ReactiveFormsModule,
     NgbModule,
-    NgbAccordionModule
+    NgbAccordionModule,
+    BrowserAnimationsModule,
+   
 
   ],
   providers: [],

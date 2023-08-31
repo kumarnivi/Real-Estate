@@ -1,86 +1,64 @@
 <section class="section section--approuch anim-scroll-up">
   <div class="container--lg">
     <div class="approach__inner">
-      <div
-        id="w-node-_7e75fadf-34a0-4797-f2ff-bc854132d5a4-4132d5a1"
-        data-current="Tab 1"
-        data-easing="ease"
-        data-duration-in="300"
-        data-duration-out="100"
-        class="approach__tabs-container w-tabs"
-      >
-        <div class="approach__tabs-menu w-tab-menu" role="tablist">
+      <div class="approach__tabs-container w-tabs">
+        <div class="approach__tabs-menu w-tab-menu">
+          <!--Button 1 -->
           <a
-            data-w-tab="Tab 1"
-            class="hoverTab approach__tabs-link w-inline-block w-tab-link w--current"
-            id="w-tabs-0-data-w-tab-0"
-            href="#w-tabs-0-data-w-pane-0"
-            role="tab"
-            aria-controls="w-tabs-0-data-w-pane-0"
-            aria-selected="false"
-            style="background-color: rgb(7, 19, 59)"
-            ><div class="approach__number-container">
-              <div class="approach__tab-number">1</div>
+         
+          style="background-color: #07133B;"
+            class="approach__tabs-link w-inline-block w-tab-link w--current"
+            (click)="showContent(1);"
+          >
+            <div class="approach__number-container">
+              <div class="approach__tab-number">
+                1</div>
             </div>
             <div class="approach__link-text">Big<br />Data</div>
-            <div class="approcah__tabs-hover" style="left: 0px"></div></a
-          ><a
-            data-w-tab="Tab 2"
-            class="hoverTab approach__tabs-link w-inline-block w-tab-link"
-            tabindex="-1"
-            id="w-tabs-0-data-w-tab-1"
-            href="#w-tabs-0-data-w-pane-1"
-            role="tab"
-            aria-controls="w-tabs-0-data-w-pane-1"
-            aria-selected="false"
-            ><div class="approach__number-container">
+            <div class="approcah__tabs-hover"></div>
+          </a>
+
+          <!--Button 2 -->
+          <a
+            class="approach__tabs-link w-inline-block w-tab-link"
+            (click)="showContent(2)"
+          >
+            <div class="approach__number-container">
               <div class="approach__tab-number">2</div>
             </div>
-            <div class="approach__link-text">Event-<br />Driven</div></a
-          ><a
-            data-w-tab="Tab 3"
-            class="hoverTab approach__tabs-link w-inline-block w-tab-link"
-            tabindex="-1"
-            id="w-tabs-0-data-w-tab-2"
-            href="#w-tabs-0-data-w-pane-2"
-            role="tab"
-            aria-controls="w-tabs-0-data-w-pane-2"
-            aria-selected="false"
-            ><div class="approach__number-container">
+            <div class="approach__link-text">Event-<br />Driven</div>
+          </a>
+
+          <!--Button 3 -->
+          <a
+            class="approach__tabs-link w-inline-block w-tab-link"
+            (click)="showContent(3)"
+          >
+            <div class="approach__number-container">
               <div class="approach__tab-number">3</div>
             </div>
-            <div class="approach__link-text">
-              Artifical<br />Intelligence
-            </div></a
-          ><a
-            data-w-tab="Tab 4"
-            class="hoverTab approach__tabs-link w-inline-block w-tab-link"
-            tabindex="-1"
-            id="w-tabs-0-data-w-tab-3"
-            href="#w-tabs-0-data-w-pane-3"
-            role="tab"
-            aria-controls="w-tabs-0-data-w-pane-3"
-            aria-selected="false"
-            ><div class="approach__number-container">
+            <div class="approach__link-text">Artifical<br />Intelligence</div>
+          </a>
+
+          <!--Button 4 -->
+          <a
+            class="approach__tabs-link w-inline-block w-tab-link"
+            (click)="showContent(4)"
+          >
+            <div class="approach__number-container">
               <div class="approach__tab-number">4</div>
             </div>
-            <div class="approach__link-text">Predictive<br />Analytics</div></a
-          >
+            <div class="approach__link-text">Predictive<br />Analytics</div>
+          </a>
         </div>
         <div class="approach__tabs-content w-tab-content">
-          <div
-            data-w-tab="Tab 1"
-            class="approach__tab-pane w-tab-pane w--tab-active"
-            id="w-tabs-0-data-w-pane-0"
-            role="tabpanel"
-            aria-labelledby="w-tabs-0-data-w-tab-0"
-          >
+          <!---img 1-->
+          <ng-container *ngIf="activeContent === 1">
             <div class="approach__tab-container">
               <div class="approach__img-container">
                 <img
-                  loading="lazy"
                   src="https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c4162b68cc6_big%20data.svg"
-                  alt=""
+                  alt
                   class="fullscreen-img"
                 />
               </div>
@@ -97,20 +75,16 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            data-w-tab="Tab 2"
-            class="approach__tab-pane w-tab-pane"
-            id="w-tabs-0-data-w-pane-1"
-            role="tabpanel"
-            aria-labelledby="w-tabs-0-data-w-tab-1"
-          >
+          </ng-container>
+
+          <!---img 2-->
+          <ng-container *ngIf="activeContent === 2">
             <div class="approach__tab-container">
               <div class="approach__img-container">
                 <img
                   loading="eager"
                   src="https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c95ebb68ce1_event%20driven.svg"
-                  alt=""
+                  alt
                   class="fullscreen-img"
                 />
               </div>
@@ -127,20 +101,15 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            data-w-tab="Tab 3"
-            class="approach__tab-pane w-tab-pane"
-            id="w-tabs-0-data-w-pane-2"
-            role="tabpanel"
-            aria-labelledby="w-tabs-0-data-w-tab-2"
-          >
+          </ng-container>
+
+          <!---img 3-->
+          <ng-container *ngIf="activeContent === 3">
             <div class="approach__tab-container">
               <div class="approach__img-container">
                 <img
-                  loading="eager"
                   src="https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c7c79b68ce5_artifical%20intelligence.svg"
-                  alt=""
+                  alt
                   class="fullscreen-img"
                 />
               </div>
@@ -156,20 +125,15 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            data-w-tab="Tab 4"
-            class="approach__tab-pane w-tab-pane"
-            id="w-tabs-0-data-w-pane-3"
-            role="tabpanel"
-            aria-labelledby="w-tabs-0-data-w-tab-3"
-          >
+          </ng-container>
+
+          <!---img 4-->
+          <ng-container *ngIf="activeContent === 4">
             <div class="approach__tab-container">
               <div class="approach__img-container">
                 <img
-                  loading="eager"
                   src="https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c5aa8b68ce2_predictive%20analytics.svg"
-                  alt=""
+                  alt
                   class="fullscreen-img"
                 />
               </div>
@@ -187,13 +151,13 @@
                 </div>
               </div>
             </div>
-          </div>
+          </ng-container>
         </div>
       </div>
-      <div
-        id="w-node-_7e75fadf-34a0-4797-f2ff-bc854132d5f0-4132d5a1"
-        class="approach__add-info"
-      >
+
+      <!-------------------------------------------->
+
+      <div class="approach__add-info">
         <h2 class="approach__title">Our approach</h2>
         <div class="approach__title-container title-container__desktop">
           <div class="approach__number-wrap">
@@ -203,11 +167,7 @@
           <div class="approach__text">
             Catalyze AI predicts to sell per year.
           </div>
-          <a
-            data-btn=""
-            href="https://re.catalyzeai.com/sign-up"
-            target="_blank"
-            class="button button--fill w-inline-block"
+          <a data-btn href="#" class="button button--fill w-inline-block"
             ><div class="button-text">Sign Up</div>
             <div class="btn-circles mod--btn">
               <div class="btn-circle"></div>
