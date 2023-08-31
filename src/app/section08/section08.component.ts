@@ -1,5 +1,5 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
-
+import { SwiperModule } from 'swiper/types/shared';
 @Component({
   selector: 'app-section08',
   templateUrl: './section08.component.html',
@@ -8,5 +8,5 @@ import { Component, ViewChild, AfterViewInit } from '@angular/core';
 export class Section08Component  {
  
 
-
+  
 }

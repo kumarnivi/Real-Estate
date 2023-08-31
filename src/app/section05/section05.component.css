@@ -1,7 +1,45 @@
 .approach__tabs-link:hover {
     background-color: rgb(20,31,69) !important;
+    color: #fff;
     border:none !important;
     cursor: pointer !important;
 }
 
+.active{
+    background-color: #1ED07D;
+}
 
+
+/* Hide scrollbar for the tab menu */
+.approach__tabs-menu {
+    overflow: hidden !important;
+  }
+  
+  /* Enable scrolling within the tab menu */
+  .approach__tabs-menu.w-tab-menu {
+    overflow-x: scroll !important;
+    white-space: nowrap !important; /* Prevent tab links from wrapping */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  }
+  
+  /* Hide scrollbar for the tab content */
+  .approach__tabs-content.w-tab-content {
+    overflow: hidden !important;
+  }
+  
+  /* Enable scrolling within the tab content */
+  .approach__tabs-content.w-tab-content {
+    overflow-x: scroll;
+    scroll-behavior: smooth; /* Enable smooth scrolling behavior */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+   
+  }
+  
+  /* Remove the default scrollbar styling */
+  .approach__tabs-menu::-webkit-scrollbar,
+  .approach__tabs-content::-webkit-scrollbar {
+    display: none !important;
+  }
+  
+
+  

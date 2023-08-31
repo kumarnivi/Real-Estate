@@ -14,4 +14,32 @@ export class Section05Component implements OnInit {
  }
 
  
+activeButton:string = 'button1';
+
+handleButtonClick(button:string) {
+  this.activeButton = button;
+  this.changeButtonColors();
+
+}
+  changeButtonColors() {
+    switch (this.activeButton){
+      case 'button1':
+      break;
+      case 'button2':
+      break;
+      case 'button3':
+        break;
+        case 'button4':
+      break;
+          this.resetButtonColors()
+    
+  }
+}
+resetButtonColors() {
+   
+}
+
+
+
+
 }
