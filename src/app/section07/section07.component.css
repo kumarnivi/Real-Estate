@@ -14,11 +14,9 @@ h2 {
     color: #ffffff;
     border: none !important;
     border-radius: 5px !important;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     padding-left: 20px;
-    /* width: 100%;  */
-    /* text-align: left;  */
     margin-top: 5px;
     font-size: 17.65px;
 }
@@ -38,12 +36,15 @@ h2 {
     font-size: 16.0066px;
 }
 
+/* for activating panel */
+
 .acco-item.active-panel {
     background-color:rgb(20,31,69) !important;
     border-radius: 10px;
     border: none !important;
     border-radius: 10px;
   }
+
 
   .acco-btn.active-button {
     background-color: rgb(20,31,69) !important;

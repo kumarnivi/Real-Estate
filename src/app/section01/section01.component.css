@@ -7,3 +7,28 @@
     
  }   
   
+ .container{
+   font-family: "Poppins", sans-serif !important;
+   color: #07153D;
+ }
+
+
+
+.horizontal-scroll {
+   display: flex;
+   overflow-x: scroll;
+   width: 100%;
+   white-space: nowrap;
+ }
+ 
+ .horizontal-scroll .row {
+   flex:0 0   auto;
+  margin-left: 100px;
+ }
+
+
+ /* Hide the scrollbar */
+.horizontal-scroll::-webkit-scrollbar {
+   width: 0;
+   height: 0;
+ }

@@ -21,6 +21,7 @@
                 'active-panel': i === activePanelIndex
               }"
               class="acco-item"
+
             >
               <h2 ngbAccordionHeader>
                 <button
@@ -29,6 +30,10 @@
                   [ngClass]="{
                     'acco-btn': true,
                     'active-button': i === activePanelIndex
+                  }"
+                  [ngStyle]="{
+                    'border': 'none',
+                    'outline': 'none'
                   }"
                 >
                 <span class="panel-number"
@@ -41,21 +46,25 @@
                   <h3>  {{ panel }}</h3>
                 </button>
               </h2>
-              <div ngbAccordionCollapse>
+              <div ngbAccordionCollapse >
                 <div ngbAccordionBody class="acco-body">
                   {{ content[panels.indexOf(panel)] }}
 
                   <!-- Display image only on mobile devices -->
                   <div>
-                    <img
+                    
+
+                </div>
+
+                <img
                       src="{{ images[i] }}"
                       alt=""
                       class="img-fluid d-md-none"
                       height="550"
                       width="550"
+                      style="margin-left: -20px; margin-top: 20px;"
                     />
                   </div>
-                </div>
               </div>
             </div>
           </div>
