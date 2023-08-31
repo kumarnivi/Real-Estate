@@ -69,8 +69,19 @@
     white-space: nowrap;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer/Edge */
+    scroll-behavior: smooth; /* Add smooth scroll behavior */
+    -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS devices */
+    scroll-snap-type: x mandatory; /* Enable snapping to each div */
   }
   
+  .scroll-column {
+    flex: 0 0 auto;
+   
+    scroll-snap-align: start; /* Snap each column to the start */
+  
+   
+  }
+
   .horizontal-scroll::-webkit-scrollbar {
     display: none; /* Chrome, Safari, and Opera */
   }
@@ -92,6 +103,7 @@
     align-items: center;
     
   }
+
   
   @media (max-width: 576px) { /* Adjust the breakpoint as needed */
     .p-mobile {

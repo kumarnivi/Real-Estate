@@ -1,50 +1,76 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
-  
-.section--opportunity {
-   font-family: "Poppins", sans-serif !important;
-   color:  #07153D;
-   
-} 
 
-.container{
-    padding: 0;
-    margin: 0;
+.section--opportunity {
+  font-family: "Poppins", sans-serif !important;
+  color: #07153d;
 }
 
+.container {
+  padding: 0;
+  margin: 0;
+}
 .horizontal-scroll {
-    width: 100%;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer/Edge */
-  }
-  
-  .horizontal-scroll::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, and Opera */
-  }
-  
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer/Edge */
+  scroll-behavior: smooth; /* Add smooth scroll behavior */
+  -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS devices */
+  scroll-snap-type: x mandatory; /* Enable snapping to each div */
+}
 
-  .row.no-gutters {
-    display: flex !important;
-    white-space: nowrap;
+.scroll-column {
+  flex: 0 0 auto;
+  scroll-snap-align: start; /* Snap each column to the start */
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+.row.no-gutters {
+  display: flex !important;
+  white-space: nowrap;
+}
+
+.col {
+  display: inline-block;
+  vertical-align: top;
+  width: 400px; /* Adjust the width as needed */
+  margin-right: 30px; /* Add spacing between columns */
+}
+
+
+
+ /* Default styles for paragraphs */
+ .scroll-column p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+
+@media (max-width: 746px) {
+  /* Adjust the breakpoint as needed */
+  .p-mobile {
+    font-size: 14px;
+   
   }
-  
   .col {
-    display: inline-block;
-    vertical-align: top;
-    width: 400px; /* Adjust the width as needed */
-    margin-right: 30px; /* Add spacing between columns */
+    width: 100%; /* Full width for each column on mobile */
+    padding: 20px;
   }
 
-  p{
-    align-items: center;
+}
+
+
+@media (max-width: 767px) {
+  .scroll-column p {
+    font-size: 14px; /* Decrease font size for mobile */
+    line-height: 1.4; /* Adjust line height as needed */
     
   }
-  
-  @media (max-width: 576px) { /* Adjust the breakpoint as needed */
-    .p-mobile {
-      font-size: 14px; /* Adjust the font size as needed */
-    }
-  }
+}
