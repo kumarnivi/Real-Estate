@@ -90,6 +90,13 @@
     border-radius: 5px;
   }
 
+  .navbar-toggler {
+    border: none; /* Remove the border */
+    outline: none; /* Remove the outline */
+    box-shadow: none;
+    /* Add any other custom styles you want */
+  }
+
   .a{
     position: fixed !important ;
     left: 0 !important;
