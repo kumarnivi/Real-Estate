@@ -11,7 +11,9 @@ export class FooterComponent implements OnInit {
 
   radioForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) { 
+
+  }
 
   
   contactForm = new FormGroup({
@@ -51,23 +53,20 @@ export class FooterComponent implements OnInit {
   }
 
 
- ngOnInit(): void {
-   
- }
  
-activeDropdown:number |null =null;
+// activeDropdown:number |null =null;
 
-toggleDropdown(dropdrownNumber:number) {
-  if (this.activeDropdown === dropdrownNumber){
-    this.activeDropdown =null;
-  } else{
-    this.activeDropdown = dropdrownNumber
-  }
-}
+// toggleDropdown(dropdrownNumber:number) {
+//   if (this.activeDropdown === dropdrownNumber){
+//     this.activeDropdown =null;
+//   } else{
+//     this.activeDropdown = dropdrownNumber
+//   }
+// }
  
-isDropdownOpen(dropdrownNumber:number) : boolean {
-  return this.activeDropdown === dropdrownNumber
-}
+// isDropdownOpen(dropdrownNumber:number) : boolean {
+//   return this.activeDropdown === dropdrownNumber
+// }
 
 // @HostListener('window:resize',[$event]){
 //   onresize(event:Event) {
@@ -76,6 +75,64 @@ isDropdownOpen(dropdrownNumber:number) : boolean {
 //     }
 //   }
 // }
+
+
+ 
+
+isMobile!: boolean;
+dropdownOpen: boolean[] = [];
+
+footerLinks = [
+  {
+    title: 'Financial Services',
+    icon: 'https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c2e9ab68d1b_S.svg',
+    subLinks: [
+      { title: 'Pricing', url: '#' },
+      { title: 'Blog', url: '#' }
+    ]
+  },
+  {
+    title: 'Real Estate',
+    icon: 'https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c2e9ab68d1b_S.svg',
+    subLinks: [
+      { title: 'Pricing', url: '#' },
+      { title: 'Blog', url: '/real-estate/blog' }
+    ]
+  },
+
+  {
+    title: 'Social media',
+    icon: 'https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c2e9ab68d1b_S.svg',
+    subLinks: [
+      { title: 'LinkedIn', url: '#' },
+     
+    ]
+  },
+  // Add other footer links here
+];
+
+
+
+ngOnInit() {
+  this.checkMobile();
+  window.addEventListener('resize', this.checkMobile.bind(this));
+ 
+}
+
+checkMobile() {
+  this.isMobile = window.innerWidth <= 768;
+}
+
+toggleDropdown(index: number) {
+  this.dropdownOpen[index] = !this.dropdownOpen[index];
+}
+
+isDropdownOpen(index: number) {
+  return this.dropdownOpen[index];
+  
+}
+
+
 
 
 
