@@ -61,8 +61,17 @@
   }
   .col {
     width: 100%; /* Full width for each column on mobile */
-    padding: 20px;
+    /* padding: 20px; */
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto !important;
+    flex: 0 0 auto !important;
   }
+
+ 
 
 }
 
@@ -73,4 +82,15 @@
     line-height: 1.4; /* Adjust line height as needed */
     
   }
+
+   .opportunity__card.swiper-slide {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto !important;
+    -ms-flex: 0 0 auto !important;
+    flex: 0 0 auto !important;
+
+}
 }

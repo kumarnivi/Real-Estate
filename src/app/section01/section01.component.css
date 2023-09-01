@@ -50,14 +50,37 @@
     margin-right: 30px; /* Add spacing between columns */
   }
 
+  .col-12{
+    font-size: 33.4px;
+  }
   p{
     align-items: center;
     
   }
 
   
-  @media (max-width: 576px) { /* Adjust the breakpoint as needed */
+  @media (max-width: 746px) { /* Adjust the breakpoint as needed */
     .p-mobile {
       font-size: 14px; /* Adjust the font size as needed */
     }
-  }
+    .col-12{
+      font-size: 28px;
+      text-align: center;
+     justify-content: center;
+    }
+    .scroll-column{
+      align-items: center;
+      overflow: hidden;
+      width: 100% !important;
+      padding-right: 2rem !important;
+      padding-left: 1rem !important;
+      -webkit-box-flex: 0 !important;
+      -webkit-flex: 0 0 auto !;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto !important;
+    }
+    h5 {
+      line-height: 1.4666666666666666 !important;
+     margin-left: -25px;
+    }
+}

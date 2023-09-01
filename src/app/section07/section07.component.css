@@ -38,38 +38,14 @@ h2 {
     font-size: 16.0066px;
 }
 
-.accordion-button::after {
-  flex-shrink: 0;
-  width: var(--bs-accordion-btn-icon-width);
-  height: var(--bs-accordion-btn-icon-width);
-  margin-left: auto;
-  content: "";
-  background-image: var(--bs-accordion-btn-icon);
-  background-repeat: no-repeat;
-  background-size: var(--bs-accordion-btn-icon-width);
-  transition: var(--bs-accordion-btn-icon-transition);
-}
-.accordion-button::after {
-  flex-shrink: 0;
-  width: var(--bs-accordion-btn-icon-width);
-  height: var(--bs-accordion-btn-icon-width);
-  margin-left: auto;
-  content: "";
-  background-image: var(--bs-accordion-btn-icon);
-  background-repeat: no-repeat;
-  background-size: var(--bs-accordion-btn-icon-width);
-  transition: var(--bs-accordion-btn-icon-transition);
+.collapsed {
+  outline: #07153D;
+  background: transparent;
 }
 
-*, ::after, ::before {
-  box-sizing: border-box;
-}
-*, ::after, ::before {
-  box-sizing: border-box;
-}
-*, ::after, ::before {
-  box-sizing: border-box;
-}
+
+
+
 .acco-btn[_ngcontent-ng-c487176778] {
   background-color: #07133B !important;
   color: #ffffff;
@@ -80,16 +56,9 @@ h2 {
   padding-left: 20px;
   margin-top: 5px;
   font-size: 17.65px;
+  outline: #07133B;
 }
-[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
-  cursor: pointer;
-}
-[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
-  cursor: pointer;
-}
-[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
-  cursor: pointer;
-}
+
 .accordion-button {
   position: relative;
   display: flex;
@@ -105,26 +74,8 @@ h2 {
   overflow-anchor: none;
   transition: var(--bs-accordion-transition);
 }
-[type=button], [type=reset], button {
-  border: 0;
-  cursor: pointer;
-  -webkit-appearance: button;
-}
-.accordion-button {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
-  font-size: 1rem;
-  color: var(--bs-accordion-btn-color);
-  text-align: left;
-  background-color: var(--bs-accordion-btn-bg);
-  border: 0;
-  border-radius: 0;
-  overflow-anchor: none;
-  transition: var(--bs-accordion-transition);
-}
+
+
 .accordion-button {
   position: relative;
   display: flex;
@@ -134,123 +85,23 @@ h2 {
   font-size: 1rem;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  /* background-color: #fff; */
   border: 0;
   border-radius: 0;
   overflow-anchor: none;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,border-radius .15s ease;
-}
-button, select {
-  text-transform: none;
-}
-button, input, optgroup, select, textarea {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-button, html input[type=button], input[type=reset] {
-  -webkit-appearance: button;
-  cursor: pointer;
-}
-button, select {
-  text-transform: none;
-}
-button, input, optgroup, select, textarea {
-  color: inherit;
-  font: inherit;
-  margin: 0;
-}
-button, select {
-  text-transform: none;
-}
-button, input, optgroup, select, textarea {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-button, select {
-  text-transform: none;
-}
-button, input, optgroup, select, textarea {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-* {
-  outline: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: #07133B;
 }
 
-h2[_ngcontent-ng-c487176778] {
-  color: #ffffff;
-}
-.h2, h2 {
-  font-size: calc(1.325rem + .9vw);
-}
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  line-height: 1.2;
-  color: var(--bs-heading-color);
-}
-h2 {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-family: Hellix,sans-serif;
-  font-size: 2.875rem;
-  line-height: 1.2;
-  font-weight: 600;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-.h2, h2 {
-  font-size: calc(1.325rem + .9vw);
-}
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  line-height: 1.2;
-  color: var(--bs-heading-color);
-}
-.h2, h2 {
-  font-size: calc(1.325rem + .9vw);
-}
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  line-height: 1.2;
-}
-user agent stylesheet
-h2 {
-  font-size: 1.5em;
-  font-weight: bold;
-}
+
+
+
 .acco-item[_ngcontent-ng-c487176778] {
   background-color: #07153D !important;
   border-radius: 10px;
   border: none !important;
   font-size: 16.0066px;
 }
-.accordion-item {
-  color: var(--bs-accordion-color);
-  background-color: var(--bs-accordion-bg);
-  border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
-}
-.accordion-item {
-  color: var(--bs-accordion-color);
-  background-color: var(--bs-accordion-bg);
-  border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
-}
+
 
 
 /* for activating panel */
@@ -260,14 +111,16 @@ h2 {
     border-radius: 10px;
     border: none !important;
     border-radius: 10px;
+   
   }
 
 
   .acco-btn.active-button {
     background-color: rgb(20,31,69) !important;
-    border: solid rgb(20,31,69)  !important;
+  
     border-radius: 10px !important;
     font-size: 17.67px;
+   
   }
   
   .panel-number {
