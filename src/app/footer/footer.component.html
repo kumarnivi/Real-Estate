@@ -1,17 +1,9 @@
-<footer
-  class="footer"
-  style="
-    opacity: 1;
-    transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1) rotateX(0deg)
-      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d !important;
-  "
->
+<footer class="footer">
   <div class="footer__container">
     <img
       src="https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c3e9eb68d1a_bg.svg"
       loading="lazy"
-      alt=""
+      alt
       class="footer__bg-img"
     />
     <div class="footer__row footer__row--first">
@@ -19,10 +11,9 @@
         <form
           id="wf-form-contact-form"
           name="wf-form-contact-form"
-          data-name="contact-form"
-          method="get"
           class="form"
-          aria-label="contact-form"
+          [formGroup]="contactForm"
+          (submit)="onSubmit()"
         >
           <div class="columns mod--form">
             <div class="col mod--form">
@@ -30,57 +21,119 @@
                 <input
                   type="text"
                   class="input w-input"
-                  maxlength="256"
-                  name="footer-name-2"
-                  data-name="Footer Name 2"
+                  maxlength="20"
+                  name="name"
                   placeholder="Name"
                   id="footer-name-2"
+                  formControlName="name"
                 />
+                <span
+                  *ngIf="!name?.valid && (name?.touched || name?.dirty)"
+                  class="text-danger"
+                >
+                  <span
+                    class="text-danger text-center"
+                    *ngIf="name?.errors?.['required']"
+                  >
+                    Name is Required !
+                  </span>
+                  <span
+                    class="text-danger text-center"
+                    *ngIf="name?.errors?.['maxlength']"
+                  >
+                    Maximum length is 10 Characters !
+                  </span>
+                  <span
+                    class="text-danger text-center"
+                    *ngIf="name?.errors?.['pattern']"
+                  >
+                    Only letters Allowed !
+                  </span>
+                </span>
               </div>
+
               <div class="input-wrap">
                 <input
                   type="email"
                   class="input w-input"
-                  maxlength="256"
-                  name="Email"
-                  data-name="Email"
+                  name="email"
                   placeholder="Email"
                   id="Email-4"
-                  required=""
+                  required
+                  formControlName="email"
                 />
+                <span
+                  *ngIf="!email?.valid && (email?.touched || email?.dirty)"
+                  class="text-danger"
+                >
+                  <span
+                    class="text-danger text-center"
+                    *ngIf="email?.errors?.['required']"
+                  >
+                    Email is Required !
+                  </span>
+                </span>
+                <span
+                  *ngIf="
+                    email?.hasError('email') && (email?.touched || email?.dirty)
+                  "
+                  class="text-danger"
+                >
+                  <span class="text-danger text-center">
+                    Enter a Valid Email Address!
+                  </span>
+                </span>
               </div>
+
               <div class="radios-container">
+                <!--Radio button 1-->
                 <label class="radio-wrap w-radio"
-                  ><div
-                    class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input w--redirected-checked"
-                  ></div>
+                  ><div class="dot">
+                    <input
+                      type="radio"
+                      id="Green"
+                      name="colors"
+                      value="Green"
+                      checked
+                    />
+                  </div>
+
                   <input
+                    class="form-check-input"
                     type="radio"
-                    name="contact-radio"
+                    name="sections"
                     id="financial-services"
                     value="financial-services"
-                    data-name="contact-radio"
-                    required=""
-                    checked=""
+                    required
                     style="opacity: 0; position: absolute; z-index: -1"
-                  /><span
-                    class="radio-label w-form-label"
-                    for="financial-services"
+                    formControlName="sections"
+                  />
+                  <span class="radio-label" for="financial-services"
                     >Financial Services</span
-                  ></label
-                ><label class="radio-wrap w-radio"
-                  ><div
-                    class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input"
-                  ></div>
+                  >
+                </label>
+
+                <!--Radio button 2-->
+                <label class="radio-wrap w-radio">
+                  <div class="dot">
+                    <input
+                      type="radio"
+                      id="Green"
+                      name="colors"
+                      value="Green"
+                    />
+                  </div>
                   <input
+                    class="form-check-input"
                     type="radio"
-                    name="contact-radio"
+                    name="sections"
                     id="real-estate"
                     value="real-estate"
-                    data-name="contact-radio"
-                    required=""
+                    required
                     style="opacity: 0; position: absolute; z-index: -1"
-                  /><span class="radio-label w-form-label" for="real-estate"
+                    formControlName="sections"
+                  />
+                  <span class="radio-label" for="real-estate" id="Green"
                     >Real Estate</span
                   ></label
                 >
@@ -90,29 +143,49 @@
               <div class="input-wrap mod--textarea">
                 <textarea
                   placeholder="Message.."
-                  maxlength="5000"
+                  maxlength="200"
                   id="Message-2"
-                  name="Message-2"
-                  data-name="Message 2"
+                  name="message"
                   class="input mod--textarea w-input"
+                  formControlName="message"
                 ></textarea>
+                <span
+                  *ngIf="
+                    !message?.valid && (message?.touched || message?.dirty)
+                  "
+                  class="text-danger"
+                >
+                  <span
+                    class="text-danger text-center"
+                    *ngIf="message?.errors?.['required']"
+                  >
+                    Message is Required !
+                  </span>
+                  <span
+                    class="text-danger text-center"
+                    *ngIf="message?.errors?.['maxlength']"
+                  >
+                    Maximum length is 200 Characters !
+                  </span>
+                  <span
+                    class="text-danger text-center"
+                    *ngIf="message?.errors?.['pattern']"
+                  >
+                    Only Letters Allowed !
+                  </span>
+                </span>
               </div>
-              <div data-btn="" class="form__submit-wrap">
-                <div form-submitted="anim" class="form__result">
-                  <img
-                    loading="lazy"
-                    src="https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1cf4c37e85e655378e1dd_ico-submit-check.svg"
-                    alt=""
-                    class="form__result-ico"
-                  />
-                </div>
-                <input
+
+              <div data-btn class="form__submit-wrap">
+                <div form-submitted="anim" class="form__result active"></div>
+                <button
                   type="submit"
                   value="Submit"
-                  data-wait="Submit"
-                  form-submitted="anim"
-                  class="form__submit w-button"
-                />
+                  class="form__submit"
+                  [disabled]="!contactForm.valid"
+                >
+                  Submit
+                </button>
                 <div class="btn-circles mod--btn">
                   <div class="btn-circle"></div>
                   <div class="btn-circle mod--2"></div>
@@ -121,20 +194,10 @@
             </div>
           </div>
         </form>
-        <div
-          class="w-form-done"
-          tabindex="-1"
-          role="region"
-          aria-label="contact-form success"
-        >
+        <div class="w-form-done">
           <div>Thank you! Your submission has been received!</div>
         </div>
-        <div
-          class="w-form-fail"
-          tabindex="-1"
-          role="region"
-          aria-label="contact-form failure"
-        >
+        <div class="w-form-fail">
           <div>Oops! Something went wrong while submitting the form.</div>
         </div>
       </div>
@@ -157,7 +220,7 @@
             ><img
               src="https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c7c9ab68d05_logo.svg"
               loading="lazy"
-              alt=""
+              alt
               class="footer__logo-img"
           /></a>
           <div class="dropdown__links-body links__contacts-hide">
@@ -172,34 +235,33 @@
           id="w-node-b8dac2b6-808e-857e-5d3b-b482e96483d7-e96483a9"
           class="footer__columns grid-column__links"
         >
+          <!------First dropdown-->
           <div class="footer__links-container">
-            <div class="dropdown__links-toggle">
-              <a
-                data-link="white"
-                href="/financial-services"
-                class="dropdown__link w-inline-block"
+            <div class="dropdown__links-toggle"  (click)="toggleDropdown(1)">
+              <a data-link="white" class="dropdown__link w-inline-block"
                 ><div class="text-weight-medium">Financial Services</div>
                 <div class="button__dot-wrap">
                   <div class="button__dot mod--white"></div></div></a
               ><img
                 src="https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c2e9ab68d1b_S.svg"
                 loading="lazy"
-                alt=""
+                alt
                 class="dropdown__link-icon"
               />
             </div>
-            <div class="dropdown__links-body" style="">
+
+            <div class="dropdown__links-body" *ngIf="isDropdownOpen(1)">
               <div class="dropdown__links">
                 <a
                   data-link="white"
-                  href="/financial-services/pricing"
+                  href="#"
                   class="dropdown__link w-inline-block"
                   ><div>Pricing</div>
                   <div class="button__dot-wrap">
                     <div class="button__dot mod--white"></div></div></a
                 ><a
                   data-link="white"
-                  href="/financial-services/blog"
+                  href="#"
                   class="dropdown__link w-inline-block"
                   ><div class="button__dot-wrap">
                     <div class="button__dot mod--white"></div>
@@ -209,11 +271,13 @@
               </div>
             </div>
           </div>
+
+
+          <!--Second dropdown-->
           <div class="footer__links-container">
-            <div class="dropdown__links-toggle">
+            <div class="dropdown__links-toggle"  (click)="toggleDropdown(2)">
               <a
                 data-link="white"
-                href="/real-estate"
                 aria-current="page"
                 class="dropdown__link w-inline-block w--current"
                 ><div class="text-weight-medium">Real Estate</div>
@@ -222,15 +286,15 @@
               ><img
                 src="https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c2e9ab68d1b_S.svg"
                 loading="lazy"
-                alt=""
+                alt
                 class="dropdown__link-icon"
               />
             </div>
-            <div class="dropdown__links-body" style="">
+            <div class="dropdown__links-body" *ngIf="isDropdownOpen(2)">
               <div class="dropdown__links">
                 <a
                   data-link="white"
-                  href="/real-estate/pricing"
+                  href="#"
                   class="dropdown__link w-inline-block"
                   ><div>Pricing</div>
                   <div class="button__dot-wrap">
@@ -247,55 +311,58 @@
               </div>
             </div>
           </div>
+
+
+          <!--Third dropdown-->
           <div class="footer__links-container">
-            <div class="dropdown__links-toggle footer__link-social">
-              <div class="dropdown__link-title">Social</div>
+            <div class="dropdown__links-toggle"  (click)="toggleDropdown(3)">
+              <a
+                data-link="white"
+                aria-current="page"
+                class="dropdown__link w-inline-block w--current"
+                ><div class="text-weight-medium">Social Media</div>
+                <div class="button__dot-wrap">
+                  <div class="button__dot mod--white"></div></div></a
+              >
               <img
                 src="https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c2e9ab68d1b_S.svg"
                 loading="lazy"
-                alt=""
+                alt
                 class="dropdown__link-icon"
               />
             </div>
-            <div class="dropdown__links-body footer__links-soc" style="">
+            <div class="dropdown__links-body" *ngIf="isDropdownOpen(3)">
               <div class="dropdown__links">
                 <a
                   data-link="white"
                   href="#"
                   class="dropdown__link w-inline-block"
+                  ><div>Linkedin</div>
+                  <div class="button__dot-wrap">
+                    <div class="button__dot mod--white"></div></div></a
+                >
+                <a
+                  data-link="white"
+                  href="/real-estate/blog"
+                  class="dropdown__link w-inline-block"
                   ><div class="button__dot-wrap">
                     <div class="button__dot mod--white"></div>
                   </div>
-                  <div>LinkedIn</div></a
+                  <div></div></a
                 >
               </div>
             </div>
           </div>
-          <a
-            href="/do-not-sell-my-info"
-            class="footer__data-container w-inline-block"
+          <a href="#" class="footer__data-container w-inline-block"
             ><div class="footer__data-button">Do not sell my data</div>
             <img
               src="https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843cc612b68d40_security.svg"
               loading="lazy"
-              alt=""
+              alt
               class="footer__data-icon"
           /></a>
           <div class="gotop">
-            <div
-              data-is-ix2-target="1"
-              class="lottie mod--gotop"
-              data-w-id="efe1db5b-bf7f-f296-78dc-f9636b957edd"
-              data-animation-type="lottie"
-              data-src="https://assets.website-files.com/63a1773692843c14b3b68ca0/63a2d4df52e27a338033fd25_gotop.json"
-              data-loop="0"
-              data-direction="1"
-              data-autoplay="0"
-              data-renderer="svg"
-              data-default-duration="5"
-              data-duration="0"
-              data-ix2-initial-state="0"
-            >
+            <div class="lottie mod--gotop">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 49"
@@ -365,7 +432,7 @@
                   <g
                     style="display: none"
                     transform="matrix(1,0,0,1,7,7)"
-                    opacity="0.00019455724254086704"
+                    opacity="0.00002787092551741921"
                   >
                     <path
                       stroke-linecap="round"
@@ -378,15 +445,15 @@
                     ></path>
                   </g>
                   <g
-                    style="display: none"
+                    style="display: block"
                     transform="matrix(1,0,0,1,2,2)"
-                    opacity="0.00030875582525737857"
+                    opacity="2.7950338932214436e-8"
                   >
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="bevel"
                       fill-opacity="0"
-                      stroke="rgb(254,254,254)"
+                      stroke="rgb(255,255,255)"
                       stroke-opacity="1"
                       stroke-width="1.5"
                       d=" M39.17100143432617,35.754398345947266 C40.54600143432617,34.03839874267578 41.65039825439453,32.135398864746094 42.457801818847656,30.09160041809082 C43.265201568603516,28.047800064086914 43.76240158081055,25.905000686645508 43.933998107910156,23.71380043029785 C44.10559844970703,21.522600173950195 43.947200775146484,19.329200744628906 43.46540069580078,17.184200286865234 C42.98360061645508,15.039199829101562 42.18939971923828,12.986599922180176 41.098201751708984,11.07919979095459 C40.00699996948242,9.171799659729004 38.643001556396484,7.444799900054932 37.03919982910156,5.942200183868408 C35.43539810180664,4.439599990844727 33.62260055541992,3.192199945449829 31.64699935913086,2.228600025177002 C29.67140007019043,1.2649999856948853 27.572599411010742,0.6028000116348267 25.401199340820312,0.2639999985694885 C23.229799270629883,-0.07479999959468842 21.029800415039062,-0.08799999952316284 18.854000091552734,0.22660000622272491 C16.678199768066406,0.5411999821662903 14.572799682617188,1.1770000457763672 12.586199760437012,2.1164000034332275 C10.599599838256836,3.055799961090088 8.773599624633789,4.283400058746338 7.152200222015381,5.766200065612793 C5.530799865722656,7.249000072479248 4.144800186157227,8.960599899291992 3.031599998474121,10.8548002243042 C1.9184000492095947,12.74899959564209 1.0978000164031982,14.790599822998047 0.5917999744415283,16.929000854492188 C0.08579999953508377,19.067399978637695 -0.09679999947547913,21.260799407958984 0.04839999973773956,23.454200744628906 C0.19359999895095825,25.647600173950195 0.6643999814987183,27.797000885009766 1.44760000705719,29.849599838256836 C2.230799913406372,31.90220069885254 3.3153998851776123,33.81840133666992 4.668399810791016,35.549800872802734"
@@ -433,23 +500,14 @@
             <div class="dropdown__link">
               All rights reserved. © 2022 Catalyze AI
             </div>
-            <a
-              data-link-footer-info=""
-              href="/do-not-sell-my-info"
-              class="dropdown__link mod--data"
+            <a data-link-footer-info href="#" class="dropdown__link mod--data"
               >Do not sell my data</a
             >
           </div>
           <div class="footer__info-col col--2">
-            <a
-              data-link-footer-info=""
-              href="/terms-conditions"
-              class="dropdown__link"
-              >Terms &amp; Conditions</a
-            ><a
-              data-link-footer-info=""
-              href="/privacy-policy"
-              class="dropdown__link"
+            <a data-link-footer-info href="#" class="dropdown__link"
+              >Terms & Conditions</a
+            ><a data-link-footer-info href="#" class="dropdown__link"
               >Privacy Policy</a
             >
           </div>
@@ -458,3 +516,13 @@
     </div>
   </div>
 </footer>
+<div fs-cc="banner" class="cookies">
+  <div class="cookie__text">
+    We are using cookies to ensure that we give you the best experience. By
+    continuing to use this site, you agree to our
+    <a href="#" class="cookie__text-link">policy</a>.
+  </div>
+  <div fs-cc="close" class="button button--cta button--cookie">
+    <div>Agree</div>
+  </div>
+</div>
