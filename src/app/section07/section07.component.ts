@@ -15,7 +15,7 @@ export class Section07Component {
   content: string[] = ['Give us some details on yourself and your firm.', 'Provide a zip code and we will provide you with the highest propensity prospects in a 50 mile radius.', 'On the check out page you can select the products and quantity of leads you would like per month.', 'You have immediate access to your dasboard and your leads. From here you can easily track, manage, and export your exclusive leads.'];
   images: string[] = [
     'https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c786db68d1e_first-p-800.webp',
-     'https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c2bf0b68cf9_second-p-800.webp',
+    'https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c2bf0b68cf9_second-p-800.webp',
     'https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843ca0a6b68d4c_RE-p-800.webp',
     'https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c48f7b68d57_fourth%2520RE-p-800.webp'
   ]; // Replace with actual image URLs

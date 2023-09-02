@@ -48,61 +48,14 @@ h2 {
 
 
 
-.acco-btn[_ngcontent-ng-c487176778] {
-  background-color: #07133B !important;
-  color: #ffffff;
-  border: none !important;
-  border-radius: 5px !important;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 20px;
-  margin-top: 5px;
-  font-size: 17.65px;
-  outline: #07133B;
-}
-
-.accordion-button {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
-  font-size: 1rem;
-  color: var(--bs-accordion-btn-color);
-  text-align: left;
-  background-color: var(--bs-accordion-btn-bg);
-  border: 0;
-  border-radius: 0;
-  overflow-anchor: none;
-  transition: var(--bs-accordion-transition);
-}
-
-
-.accordion-button {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 1rem 1.25rem;
-  font-size: 1rem;
-  color: #212529;
-  text-align: left;
-  /* background-color: #fff; */
-  border: 0;
-  border-radius: 0;
-  overflow-anchor: none;
-  outline: #07133B;
-}
 
 
 
 
-.acco-item[_ngcontent-ng-c487176778] {
-  background-color: #07153D !important;
-  border-radius: 10px;
-  border: none !important;
-  font-size: 16.0066px;
-}
+
+
+
+
 
 
 
