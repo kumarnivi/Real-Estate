@@ -1,136 +1,114 @@
 h2 {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .acco-header {
-    border: none !important; 
-    border-radius: 5px !important; 
-    padding: 0;
-   
+  border: none !important;
+  border-radius: 5px !important;
+  padding: 0;
 }
 
 .acco-btn {
-    background-color: #07133B !important ;
-    color: #ffffff;
-    border: none !important;
-    border-radius: 5px !important;
-    padding-top: 10px;
-    padding-bottom: 15px;
-    padding-left: 20px;
-    margin-top: 5px;
-    font-size: 17.65px;
-    background-color: transparent ;
-    box-shadow: none;
+  background-color: #07133b !important ;
+  color: #ffffff;
+  border: none !important;
+  border-radius: 5px !important;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  margin-top: 5px;
+  font-size: 17.65px;
+  background-color: transparent;
+  box-shadow: none;
 }
 
-.acco-body{
-    /* background-color: #d5dae6 !important;  */
-    color: #fff;
-    border: none !important;
-   border-radius: 5px;
-   margin-left: 40px;
+.acco-body {
+  /* background-color: #d5dae6 !important;  */
+  color: #fff;
+  border: none !important;
+  border-radius: 5px;
+  margin-left: 40px;
 }
 
-.acco-item{
-    background-color: #07153D !important ;
-    border-radius: 10px;
-    border: none !important;
-    font-size: 16.0066px;
-    padding-bottom: 5px;
-    padding-top: 0;
+.acco-item {
+  background-color: #07153d !important ;
+  border-radius: 10px;
+  border: none !important;
+  font-size: 16.0066px;
+  padding-bottom: 5px;
+  padding-top: 0;
 }
 
 .collapsed {
-  outline: #07153D;
+  outline: #07153d;
   background: transparent;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* for activating panel */
 
 .acco-item.active-panel {
-    background-color:rgb(20,31,69) !important;
-    border-radius: 10px;
-    border: none !important;
-    border-radius: 10px;
-   
-  }
+  background-color: rgb(20, 31, 69) !important;
+  border-radius: 10px;
+  border: none !important;
+  border-radius: 10px;
+}
 
+.acco-btn.active-button {
+  background-color: rgb(20, 31, 69) !important;
 
-  .acco-btn.active-button {
-    background-color: rgb(20,31,69) !important;
-  
-    border-radius: 10px !important;
-    font-size: 17.67px;
-   
-  }
-  
-  .panel-number {
-    margin-right: 10px;
-    background-color:rgb(20,31,69);
-   padding-left: 15px;
-   padding-right: 15px;
-   padding-top: 10px;
-   padding-bottom: 10px;
-   border-radius: 5px;
-   font-size: 16.0006px;
-   
-  }
+  border-radius: 10px !important;
+  font-size: 17.67px;
+}
 
-  .active-number {
-    background-color: #1BD179;
-    color: white;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 5px;
-  }
+.panel-number {
+  margin-right: 10px;
+  background-color: rgb(20, 31, 69);
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  font-size: 16.0006px;
+}
 
+.active-number {
+  background-color: #1bd179;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
 
-  /* Mobile Responsive Styles */
+/* Mobile Responsive Styles */
 @media (max-width: 767px) {
-    /* Adjust the padding, margins, font sizes, or any other styles as needed */
-    
-    .acco-btn {
-      padding: 10px;
-      font-size: 20px;
-    
-    }
+  /* Adjust the padding, margins, font sizes, or any other styles as needed */
 
-  h3{
+  .acco-btn {
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  h3 {
     align-items: center;
     font-size: 20px;
   }
-    
-    .start__img-container {
-      display: none; /* Hide the image container on small screens */
-    }
-    
-    .start__content-container {
-      text-align: center;
-    }
-    
-    .start__dec-img {
-      display: none; /* Hide the decorative image on small screens */
-    }
+
+  .start__img-container {
+    display: none; /* Hide the image container on small screens */
   }
-  
-  /* Tablet and Medium Screen Styles */
-  @media (min-width: 768px) and (max-width: 991px) {
-    /* Adjust styles for tablet and medium screens if needed */
+
+  .start__content-container {
+    text-align: center;
   }
-  
+
+  .start__dec-img {
+    display: none; /* Hide the decorative image on small screens */
+  }
+}
+
+/* Tablet and Medium Screen Styles */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Adjust styles for tablet and medium screens if needed */
+}
