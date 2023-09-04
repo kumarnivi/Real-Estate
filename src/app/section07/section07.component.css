@@ -81,6 +81,14 @@ h2 {
   border-radius: 5px;
 }
 
+
+
+.accordion-button.collapsed {
+  color: white;
+  background: blue;
+}
+
+
 /* Mobile Responsive Styles */
 @media (max-width: 767px) {
   /* Adjust the padding, margins, font sizes, or any other styles as needed */
